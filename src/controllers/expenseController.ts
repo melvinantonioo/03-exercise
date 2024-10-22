@@ -57,14 +57,31 @@ async function deleteExpense(req: Request, res: Response, next: NextFunction) {
     }
 }
 
-function getTotalByDateRange(req: Request, res: Response, next: NextFunction) {
-    // Logic untuk menghitung total berdasarkan rentang tanggal
-    res.json({ message: 'Total by date range not implemented yet' });
-}
-function getTotalByCategory(req: Request, res: Response, next: NextFunction) {
-    // Logic untuk menghitung total berdasarkan kategori
-    res.json({ message: 'Total by category not implemented yet' });
-}
+// function getTotalByDateRange(req: Request, res: Response, next: NextFunction) {
+    
+//     res.json({ message: 'Total by date range not implemented yet' });
+// }
+
+
+// async function getTotalByCategory(req: Request, res: Response, next: NextFunction) {
+//     const { category } = req.query;
+//     try {
+//         //fetch data dari mock api
+//         const response = await axios.get(`${API_URL}`);
+//         const data = response.data;
+
+//         //filtering berdasarkan kategori
+//         const filteredExpense = data.filter((item: any) => item.category === category);
+
+//         //kalkulasikan total
+//         const total = filteredExpense.reduce((acc: number, expense: any) => acc + expense.nominal, 0);
+
+//         res.json({ total });
+//     } catch (error) {
+//         console.error('Error fetching data:', error);
+//         res.status(500).json({ message: 'Error fetching data' });
+//     }
+// }
 
 
 export {
@@ -73,6 +90,5 @@ export {
     createNewExpense,
     updateExpense,
     deleteExpense,
-    getTotalByDateRange,
-    getTotalByCategory
+
 }

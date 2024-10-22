@@ -5,8 +5,6 @@ import {
     createNewExpense,
     updateExpense,
     deleteExpense,
-    getTotalByDateRange,
-    getTotalByCategory
 } from '../controllers/expenseController';
 
 const router = Router();
@@ -16,7 +14,7 @@ router.get('/:id', getExpensesById);
 router.post('/', createNewExpense);
 router.put('/:id', updateExpense);
 router.delete('/:id', deleteExpense);
-router.get('/total/date-range', getTotalByDateRange);
-router.get('/total/category', getTotalByCategory);
+// router.get('/total/date-range', getTotalByDateRange);
+// router.get('/totalByCategory', getTotalByCategory);
 
 export default router;
